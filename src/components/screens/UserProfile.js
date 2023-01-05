@@ -10,7 +10,7 @@ const Profile=()=>{
 
     console.log(userid)
     useEffect(()=>{
-        fetch(`http://localhost:5000/user/${userid}`,{
+        fetch(`https://instaclonebani.onrender.com/user/${userid}`,{
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")
             }
@@ -23,7 +23,7 @@ const Profile=()=>{
     },[])
 
     const followUser =()=>{
-        fetch('http://localhost:5000/follow',{
+        fetch('https://instaclonebani.onrender.com/follow',{
             method:"put",
             headers:{
                 "Content-Type" : "application/json",
@@ -51,7 +51,7 @@ const Profile=()=>{
         })
     }
     const unfollowUser =()=>{
-        fetch('http://localhost:5000/unfollow',{
+        fetch('https://instaclonebani.onrender.com/unfollow',{
             method:"put",
             headers:{
                 "Content-Type" : "application/json",

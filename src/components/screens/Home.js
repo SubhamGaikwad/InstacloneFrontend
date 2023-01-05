@@ -5,7 +5,7 @@ const Home=()=>{
     const [data,setData] = useState([])
     const {state,dispatch} = useContext(UserContext)
     useEffect(()=>{
-        fetch('http://localhost:5000/allpost',{
+        fetch('https://instaclonebani.onrender.com/allpost',{
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")
             }
@@ -18,7 +18,7 @@ const Home=()=>{
     },[])
 
     const likePost = (id)=>{
-        fetch('http://localhost:5000/like',{
+        fetch('https://instaclonebani.onrender.com/like',{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -43,7 +43,7 @@ const Home=()=>{
         })
     }
     const unlikePost = (id)=>{
-        fetch('http://localhost:5000/unlike',{
+        fetch('https://instaclonebani.onrender.com/unlike',{
             method:"put",
             headers:{
                 "Content-Type":"application/json",
@@ -69,7 +69,7 @@ const Home=()=>{
     }
 
     const makeComment = (text,postId)=>{
-        fetch('http://localhost:5000/comment',{
+        fetch('https://instaclonebani.onrender.com/comment',{
             method:"put",
             headers:{
                 "Content-Type" : "application/json",
@@ -96,7 +96,7 @@ const Home=()=>{
     }
 
     const deletePost =(postid)=>{
-        fetch(`http://localhost:5000/deletepost/${postid}`,{
+        fetch(`https://instaclonebani.onrender.com/deletepost/${postid}`,{
             method:"delete",
             headers:{
                 Authorization:"Bearer "+localStorage.getItem("jwt")

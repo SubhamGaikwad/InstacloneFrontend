@@ -36,7 +36,7 @@ const Signin=()=>{
             M.toast({html: "Invalid email",classes:"#d32f2f red darken-2"})
             return
         }
-        fetch("http://localhost:5000/signup",{
+        fetch("https://instaclonebani.onrender.com/signup",{
             method:"post",
             headers:{
                 "Content-Type":"application/json"

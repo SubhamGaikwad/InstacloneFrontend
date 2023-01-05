@@ -7,7 +7,7 @@ import {UserContext} from '../../App'
     const[image,setImage] = useState("")
     // const[url,setUrl] = useState("")
     useEffect(()=>{
-        fetch("http://localhost:5000/mypost",{
+        fetch("https://instaclonebani.onrender.com/mypost",{
             headers:{
                 "Authorization":"Bearer "+localStorage.getItem("jwt")
             }
@@ -33,7 +33,7 @@ import {UserContext} from '../../App'
             //   console.log(data)
             //   localStorage.setItem("user",JSON.stringify({...state,pic:data.url}))
             //   dispatch({type:"UPDATEPIC",payload:data.url})
-              fetch("http://localhost:5000/updatepic",{
+              fetch("https://instaclonebani.onrender.com/updatepic",{
                 method:"put",
                 headers:{
                     "Content-Type":"application/json",
